@@ -1,0 +1,499 @@
+# project ns (3.10) configured on Thu Jun 16 14:11:47 2011 by
+# waf 1.5.16 (abi 7, python 20605f0 on linux2)
+# using ./waf -d optimized configure --enable-static
+#
+
+----------------------------------------
+Checking for program gcc or cc
+  find program=['gcc', 'cc'] paths=[] var='CC'
+  -> '/usr/bin/gcc'
+
+----------------------------------------
+Checking for program cpp
+  find program=['cpp'] paths=[] var='CPP'
+  -> '/usr/bin/cpp'
+
+----------------------------------------
+Checking for program ar
+  find program=['ar'] paths=[] var='AR'
+  -> '/usr/bin/ar'
+
+----------------------------------------
+Checking for program ranlib
+  find program=['ranlib'] paths=[] var='RANLIB'
+  -> '/usr/bin/ranlib'
+
+----------------------------------------
+Checking for gcc 
+ok 
+
+----------------------------------------
+Checking for program g++ or c++
+  find program=['g++', 'c++'] paths=[] var='CXX'
+  -> '/usr/bin/g++'
+
+----------------------------------------
+Checking for g++ 
+ok 
+
+----------------------------------------
+Checking for program pkg-config
+  find program=['pkg-config'] paths=[] var='PKG_CONFIG'
+  -> '/usr/bin/pkg-config'
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Wl,--soname=foo', '-Ioptimized', '-I..', '../test.cc', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+----------------------------------------
+Checking for -Wl,--soname=foo support
+yes
+
+----------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+----------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+----------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-pthread', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog', '-pthread']
+yes
+
+----------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m../test.cpp: In function ‘int main()’:
+../test.cpp:4: error: ‘uint128_t’ was not declared in this scope
+../test.cpp:4: error: expected primary-expression before ‘)’ token
+../test.cpp:4: error: expected ‘)’ before numeric constant
+../test.cpp:5: error: ‘uint128_t’ was not declared in this scope
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}'not found
+
+----------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m../test.cpp: In function ‘int main()’:
+../test.cpp:4: error: ‘__uint128_t’ was not declared in this scope
+../test.cpp:4: error: expected primary-expression before ‘)’ token
+../test.cpp:4: error: expected ‘)’ before numeric constant
+../test.cpp:5: error: ‘__uint128_t’ was not declared in this scope
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}'not found
+
+-----------------------------------------------
+Checking for high precision time implementation
+cairo 128-bit integer
+
+-----------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+-----------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+-----------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m../test.cpp:1:26: error: sys/inttypes.h: No such file or directory
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}'not found
+
+-----------------------------------------------
+Checking for library rt
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog', '-Wl,-Bdynamic', '-lrt']
+yes
+
+-----------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+-----------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+---------------------------------------------------
+Checking for pkg-config flags for GTK_CONFIG_STORE 
+ok 
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0 >= 2.12']: '-pthread -D_REENTRANT -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  \n' (exit code 0)
+
+---------------------------------------------------
+Checking for pkg-config flags for LIBXML2 
+ok 
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0 >= 2.6']: '-I/usr/include/libxml2  -lxml2  \n' (exit code 0)
+
+---------------------------------------------------
+Checking for library sqlite3
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog', '-Wl,-Bdynamic', '-lsqlite3']
+yes
+
+---------------------------------------------------
+Checking for NSC location 
+not found
+
+---------------------------------------------------
+Checking for header sys/socket.h
+==>
+#include <sys/socket.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+---------------------------------------------------
+Checking for header netinet/in.h
+==>
+#include <netinet/in.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+yes
+
+---------------------------------------------------
+Checking for program python
+  find program=['python'] paths=[] var='PYTHON'
+  -> '/usr/bin/python'
+
+---------------------------------------------------
+Checking for Python version >= 2.3
+ok 2.6.5
+Configuration returned from '/usr/bin/python':
+python_prefix = '/usr'
+python_SO = '.so'
+python_SYSLIBS = '-lm'
+python_LDFLAGS = '-Wl,-Bsymbolic-functions'
+python_SHLIBS = '-lpthread -ldl  -lutil'
+python_LIBDIR = '/usr/lib'
+python_LIBPL = '/usr/lib/python2.6/config'
+INCLUDEPY = '/usr/include/python2.6'
+Py_ENABLE_SHARED = 0
+MACOSX_DEPLOYMENT_TARGET = ''
+
+
+# Trying LIBDIR: ['/usr/lib']
+
+---------------------------------------------------
+Checking for library python2.6
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Ioptimized', '-I..', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog', '-Wl,-Bsymbolic-functions', '-L/usr/lib', '-Wl,-Bdynamic', '-lpython2.6', '-lm', '-lpthread', '-ldl', '-lutil']
+yes
+
+---------------------------------------------------
+Checking for program python2.6-config
+  find program=['python2.6-config'] paths=[] var='PYTHON_CONFIG'
+  -> '/usr/bin/python2.6-config'
+Include path for Python extensions (found via python-config --includes): ['/usr/include/python2.6']
+
+---------------------------------------------------
+Checking for header Python.h
+==>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main()
+{
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-fno-strict-aliasing', '-Ioptimized', '-I..', '-I/usr/include/python2.6', '../test.cpp', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog', '-Wl,-Bsymbolic-functions', '-L/usr/lib', '-Wl,-Bdynamic', '-lm', '-lpthread', '-ldl', '-lutil', '-lpython2.6']
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-fvisibility=hidden', '-Ioptimized', '-I..', '../test.cc', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+---------------------------------------------------
+Checking for -fvisibility=hidden support
+yes
+
+---------------------------------------------------
+Checking for pybindgen location 
+not found
+
+---------------------------------------------------
+Checking for Python module pybindgen
+not found
+
+---------------------------------------------------
+Checking for program mpic++
+  find program=['mpic++'] paths=[] var='MPI'
+  -> ''
+
+---------------------------------------------------
+Checking for program sudo
+  find program=['sudo'] paths=[] var='SUDO'
+  -> '/usr/bin/sudo'
+
+---------------------------------------------------
+Checking for program valgrind
+  find program=['valgrind'] paths=[] var='VALGRIND'
+  -> '/usr/bin/valgrind'
+
+---------------------------------------------------
+Checking for pkg-config flags for GSL 
+ok 
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']: ' -lgsl -lgslcblas -lm  \n' (exit code 0)
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.cc', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -Wno-error=deprecated-declarations support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/gcc', '-O3', '-g', '-Wall', '-Werror', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.c', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/gcc', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -Wno-error=deprecated-declarations support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.cc', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -fstrict-aliasing support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/gcc', '-O3', '-g', '-Wall', '-Werror', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.c', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/gcc', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -fstrict-aliasing support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.cc', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/g++', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -Wstrict-aliasing support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/optimized/test_1.o
+[0m['/usr/bin/gcc', '-O3', '-g', '-Wall', '-Werror', '-O3', '-g', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-Ioptimized', '-I..', '-DENABLE_GSL', '../test.c', '-c', '-o', 'optimized/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/optimized/test_1.o -> build/.conf_check_0/testbuild/optimized/testprog
+[0m['/usr/bin/gcc', 'optimized/test_1.o', '-o', '/home/bowitz/Documents/master thesis/ns-3.10/build/.conf_check_0/testbuild/optimized/testprog']
+
+-------------------------------------------------------
+Checking for -Wstrict-aliasing support
+yes
+
+-------------------------------------------------------
+Checking for program doxygen
+  find program=['doxygen'] paths=[] var='DOXYGEN'
+  -> '/usr/bin/doxygen'

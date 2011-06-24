@@ -1,0 +1,88 @@
+'annestest --batman=200 --pause=0 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048
+
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   27599
+
+Flow monitor Avg Delay:   33.2717/27599 = 0.00120554
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   27599
+PDR:   0.690372
+
+
+'annestest --batman=0 --pause=200 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   21901
+
+Flow monitor Avg Delay:   17.997/21901 = 0.000821741
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   21901
+PDR:   0.54784
+
+
+
+'annestest --batman=0 --pause=400 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   23604
+
+Flow monitor Avg Delay:   23.5624/23604 = 0.000998235
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   23604
+PDR:   0.59044
+
+
+'annestest --batman=0 --pause=600 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   24284
+
+Flow monitor Avg Delay:   23.9927/24284 = 0.000988007
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   24284
+PDR:   0.607449
+
+'annestest --batman=0 --pause=800 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   22332
+
+Flow monitor Avg Delay:   30.5804/22332 = 0.00136935
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   22332
+PDR:   0.558621
+
+
+'annestest --batman=0 --pause=1000 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running DSDV protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39977
+Flow monitor total # Packets Rx:   22811
+
+Flow monitor Avg Delay:   32.798/22811 = 0.00143781
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   22811
+PDR:   0.570603
+

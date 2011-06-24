@@ -1,0 +1,87 @@
+'annestest --batman=1 --pause=0 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39931
+Flow monitor total # Packets Rx:   24953
+
+Flow monitor Avg Delay:   32.3044/24953 = 0.00129461
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   24953
+PDR:   0.624184
+
+
+'annestest --batman=1 --pause=200 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39916
+Flow monitor total # Packets Rx:   18215
+
+Flow monitor Avg Delay:   26.487/18215 = 0.00145413
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   18215
+PDR:   0.455637
+
+
+'annestest --batman=1 --pause=400 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39916
+Flow monitor total # Packets Rx:   23157
+
+Flow monitor Avg Delay:   38.5242/23157 = 0.00166361
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   23157
+PDR:   0.579258
+
+
+'annestest --batman=1 --pause=600 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39916
+Flow monitor total # Packets Rx:   25426
+
+Flow monitor Avg Delay:   38.9886/25426 = 0.00153342
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   25426
+PDR:   0.636016
+
+'annestest --batman=1 --pause=800 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39916
+Flow monitor total # Packets Rx:   22859
+
+Flow monitor Avg Delay:   46.0974/22859 = 0.0020166
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   22859
+PDR:   0.571804
+
+bowitz@bowitz-desktop:~/Documents/master thesis/ns-3.10$ ./waf --run 'annestest --batman=1 --pause=1000 --stop=1000 --ns3::YansWifiPhy::TxPowerStart=8.9048 --ns3::YansWifiPhy::TxPowerEnd=8.9048'
+
+Running simulation for 1000 seconds... Creating 10 nodes. 
+Running BATMAN protocol
+Number 0f flows:   10
+Flow monitor total # Packets Tx:   39916
+Flow monitor total # Packets Rx:   24924
+
+Flow monitor Avg Delay:   46.9762/24924 = 0.00188478
+
+Total # Packets Tx:   39977
+Total # Packets Rx:   24924
+PDR:   0.623458
+
