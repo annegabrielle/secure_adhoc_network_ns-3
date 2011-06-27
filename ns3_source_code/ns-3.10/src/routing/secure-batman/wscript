@@ -1,0 +1,28 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('secure-batman', ['internet-stack', 'contrib', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/secure-batman-rtable.cc',
+        'model/secure-batman-packet.cc',
+        'model/secure-batman-routing-protocol.cc',
+        'helper/secure-batman-helper.cc',
+        'model/secure-bitarray.cc',
+        'model/secure-ring-buffer.cc',
+        'model/am.c'
+        ]
+
+    headers = bld.new_task_gen('ns3header')
+    headers.module = 'secure-batman'
+    headers.source = [
+        'model/secure-batman-rtable.h',
+        'model/secure-batman-packet.h',
+        'model/secure-batman-routing-protocol.h',
+        'helper/secure-batman-helper.h',
+        'model/secure-bitarray.h',
+        'model/secure-ring-buffer.h',
+        'model/am.h'
+        ]
+    if (bld.env['ENABLE_EXAMPLES']):
+      bld.add_subdirs('examples')

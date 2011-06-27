@@ -1,0 +1,26 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('batman', ['internet-stack', 'contrib', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/batman-rtable.cc',
+        'model/batman-packet.cc',
+        'model/batman-routing-protocol.cc',
+        'helper/batman-helper.cc',
+        'model/bitarray.cc',
+        'model/ring-buffer.cc',
+        ]
+
+    headers = bld.new_task_gen('ns3header')
+    headers.module = 'batman'
+    headers.source = [
+        'model/batman-rtable.h',
+        'model/batman-packet.h',
+        'model/batman-routing-protocol.h',
+        'helper/batman-helper.h',
+        'model/bitarray.h',
+        'model/ring-buffer.h',
+        ]
+    if (bld.env['ENABLE_EXAMPLES']):
+      bld.add_subdirs('examples')
